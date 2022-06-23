@@ -40,7 +40,7 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
 
 
 .sun{
-  z-index: -4;
+  z-index: -2;
   width:49vh;
   height:49vh;
   border-radius:100%;
@@ -196,7 +196,7 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
 
 /*stars*/
 .stars:after{
-  z-index: -2;
+  z-index: -3;
   transform:translateY(-40%);
   content:' ';
   border-radius:100%;
@@ -205,7 +205,6 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
   position:absolute;
   left:0;
   top:0;
-  z-index:-1;
   box-shadow: 
     5vw 15vh 2px white,
     1vw 33vh 0px white,
@@ -229,9 +228,20 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
     64vw 10vh 0px white,
     85vw 2vh 0px white,
     92vw 40vh 0px rgb(240, 237, 220),
+    17vw 34vh 2px rgb(245, 97, 97),
+    8vw 31vh 2px white,
+    22vw 27vh 2px white,
+    44vw 11vh 6px rgb(255, 0, 0),
+    47vw 3vh 0px white,
+    85vw 22vh 2px white,
+    72vw 22vh 5px rgb(24, 209, 241),
     75vw 35vh 2px white,
-    90vw 10vh 0px rgb(255, 255, 255);
-  opacity:0.3;
+    75vw 49vh 2px rgb(240, 111, 111),
+    71vw 49vh 3px rgb(37, 134, 245),
+    71.02vw 49vh 0px rgb(245, 64, 9),
+    93vw 30vh 0px rgb(37, 134, 245),
+    97vw 16vh 3px rgb(37, 134, 245);
+  opacity: 0.9;
   animation:glitter 2s infinite;
 }
 
