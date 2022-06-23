@@ -40,7 +40,7 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
 
 
 .sun{
-  z-index: -5;
+  z-index: -4;
   width:49vh;
   height:49vh;
   border-radius:100%;
@@ -49,7 +49,7 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
   left:calc(50%);
   bottom:35%;
   transform:translateX(-50%);
-  background-image: linear-gradient(rgb(235, 8, 235),rgb(214, 154, 42)),linear-gradient(black,white);
+  background-image: linear-gradient(rgb(255, 85, 7),rgb(233, 24, 170)),linear-gradient(black,white);
   clip-path:polygon(-50% 0px,150% -50%,150% 55%,-50% 55%,
                     -50% 62%,150% 62%,150% 70%,0 70%,
                     -50% 75%,150% 75%,150% 80%,0 80%,
@@ -57,12 +57,12 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
                     -50% 87%,150% 87%,150% 90%,0 90%,
                     -50% 92%,150% 92%,150% 95%,0 95%,
                     -50% 96%,150% 96%,150% 150%,0 150%);
-    box-shadow: rgba(126, 17, 126, 0.7) 0px 0 23px;
+    box-shadow: rgba(201, 160, 201, 0.7) 0px 0 23px;
     
 }
 
 .building{
-    z-index: 1;
+    z-index: -1;
     position:absolute;
     content:'';
     bottom:34%;
@@ -73,7 +73,7 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
 }
 
 .buildingDetail{
-  z-index: 1;
+  z-index: -1;
   position:absolute;
   content:'';
   bottom:var(--detail-bottom);
@@ -99,13 +99,13 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
 }
 
 .window{
-  z-index: 1;
+  z-index: -1;
   position:absolute;
   content:'';
   bottom:var(--window-bottom);
   left:calc(50% + var(--window-offset,33px));
-  border-bottom:var(--window-height, 5px) solid rgb(165, 156, 24);
-  border-right:var(--window-base, 5px) solid rgb(165, 156, 24);
+  border-bottom:var(--window-height, 5px) solid var(--window-color);
+  border-right:var(--window-base, 5px) solid var(--window-color);
   transform-origin:bottom;
 }
 
@@ -166,7 +166,7 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
 
 
 .background-80s{
-  background: linear-gradient(to bottom, #036666 0,#069baf 24%,#086e61 45%,#9a9b71 60%,#532e5a 65%,#322636 65%) fixed;
+  background: linear-gradient(to bottom, #4e2068 0,#2d3769 24%,#a458d6 45%,#980fce 60%,#532e5a 65%,#322636 65%) fixed;
   background-size:100% var(--background-height,100vh);
   overflow:hidden;
   position:absolute;
@@ -212,26 +212,25 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
     2vw 25vh 2px white,
     10vw 10vh 2px white,
     12vw 20vh 0px white,
-    30vw 15vh 2px white,
+    30vw 15vh 2px rgb(245, 195, 195),
     16vw 5vh 2px white,
-    24vw 10vh 0px white,
+    24vw 10vh 0px rgb(255, 255, 255),
     32vw 40vh 0px white,
     33vw 35vh 2px white,
-    12vw 38vh 2px white,
+    12vw 38vh 2px rgb(13, 193, 238),
     24vw 10vh 0px white,
     33vw 5vh 2px white,
     20vw 10vh 0px white,
-    80vw 10vh 2px white,
+    80vw 10vh 2px rgb(20, 201, 247),
     62vw 20vh 0px white,
-    60vw 15vh 2px white,
+    60vw 15vh 2px rgb(245, 243, 141),
     70vw 7vh 0px white,
-    62vw 50vh 0px white,
     65vw 35vh 2px white,
     64vw 10vh 0px white,
     85vw 2vh 0px white,
-    92vw 40vh 0px white,
+    92vw 40vh 0px rgb(240, 237, 220),
     75vw 35vh 2px white,
-    90vw 10vh 0px white;
+    90vw 10vh 0px rgb(255, 255, 255);
   opacity:0.3;
   animation:glitter 2s infinite;
 }
@@ -245,9 +244,11 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
   }
   
   100% {
-    opacity:0.5;
+    opacity:0.7;
   }
 }
+
+
 
 .text{
   position:absolute;
@@ -264,7 +265,7 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
   font-size: 50px;
 }
 
-.glow {
+/* .glow {
   
   color: #fff;
   text-align: center;
@@ -273,14 +274,14 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow {
+@keyframes glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   }
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
-}
+} */
 
 
 .chrome{
@@ -289,6 +290,7 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
   font-size:calc(30px + 10vh);
   background-image:linear-gradient(#2989cc 0%, #d3e5ec 50%,#592451 51%,#b3628d 55%,#f0e5ee 59%,#b3628d 65%,#ac86a6 75%, #b3628d 100%);
   -webkit-background-clip:text;
+    background-clip:text;
   -webkit-text-fill-color: transparent; 
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(255,255,255,0.4);
@@ -314,6 +316,7 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
   top:0;
   left:0;
   -webkit-background-clip:text;
+    background-clip:text;
   z-index:999;
   background-size: 400% 400%;
   animation:shine 10s ease infinite;
@@ -326,30 +329,11 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
     100%{background-position:0% 51%}
 }
 
-
-.spark{
-  margin-top:calc( 4vh ) ;
-  margin-left:-0.3em;
-  line-height:0;
-  position:absolute;
-  width:37px;
-  height:45px;
-  z-index:999;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='120 250 1700 1200' width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3C!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ --%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='402' width='182' y='-1' x='-1'/%3E%3Cg display='none' overflow='visible' y='0' x='0' height='100%25' width='100%25' id='canvasGrid'%3E%3Crect fill='url(%23gridpattern)' stroke-width='0' y='0' x='0' height='100%25' width='100%25'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cellipse ry='183' rx='5' id='svg_2' cy='197.0375' cx='274.5' stroke-width='0' stroke='%23000' fill='%23fff'/%3E%3Cellipse transform='rotate(90 274.50000000000006,197.03750610351565) ' ry='183' rx='5' id='svg_3' cy='197.0375' cx='274.5' stroke-width='0' stroke='%23000' fill='%23fff'/%3E%3Cellipse stroke='%23000' transform='rotate(126.69925689697266 276.19342041015625,195.4363708496094) ' ry='90.194158' rx='3.223029' id='svg_4' cy='195.43637' cx='276.193439' stroke-width='0' fill='%23fff'/%3E%3Cellipse stroke='%23000' transform='rotate(-134.6077117919922 276.19342041015625,195.43637084960938) ' ry='90.194158' rx='3.223029' id='svg_5' cy='195.43637' cx='276.193439' stroke-width='0' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
-  filter:blur(0.5px);
-  transform:scale(0);
-  animation:blip 5s infinite;
-  animation-timing-function: ease-in-out;
-}
-
-.spark-offset{
-}
-
 .chrome:last-of-type .spark{
   animation-delay:-2.5s;
 }
 
-@-webkit-keyframes blip {
+@keyframes blip {
     0% {transform: scale(0);}
     5% {transform: scale(1.2) rotate(0deg);}
     6% {transform: scale(1) rotate(0deg);}
@@ -387,13 +371,203 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
   animation:moving-grid 0.5s infinite linear;
 }
 
-p {
+.content {
   z-index: 1;
-  padding-top: 225px;
-  color: white;
+  display: block;
+  margin: 2% 10%;
+  background: hsl(0 0% 100% / 0.1);
+  
+  color: rgb(238, 236, 236);
   font-size: 22px;
-  margin: auto;
-  width: 65%;
-  height: 75%;
-  overflow: overlay;
+  font-weight: 900;
 }
+
+/*FOG FOG FOG*/
+/*FOG FOG FOG*/
+/*FOG FOG FOG*/
+/*courtesy https://codepen.io/braedencraig/pen/dBVKzO*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #000;
+  background: rgba(0, 0, 0, 1);
+  overflow-x: hidden; 
+}
+
+/* ---------- Fog ---------- */
+
+#foglayer_01, #foglayer_02, #foglayer_03 {
+  z-index: -2;
+  height: 66%;
+  position: absolute;
+  width: 200%;
+}
+#foglayer_03 {
+  z-index: -2;
+  height: 100%;
+  position: absolute;
+  width: 200%;
+}
+
+
+#foglayer_01 .image01, #foglayer_01 .image02,
+#foglayer_02 .image01, #foglayer_02 .image02,
+#foglayer_03 .image01, #foglayer_03 .image02 {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+#foglayer_01 {
+  -webkit-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  -moz-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+}
+#foglayer_02, #foglayer_03 {
+  -webkit-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  -moz-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+}
+
+/* ---------- Moving Fog ---------- */
+/*
+  'size: cover' || 'size: 100%'; results remain the same
+  'attachment: scroll' can be added or removed; results remain the same
+  'attachment: fixed' causing unexpected results in Chrome
+  'repeat-x' || 'no-repeat'; results remain the same
+*/ 
+#foglayer_01 .image01, #foglayer_01 .image02 {
+  background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png") center center/cover no-repeat transparent;
+}
+#foglayer_02 .image01, #foglayer_02 .image02,
+#foglayer_03 .image01, #foglayer_03 .image02{
+  background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png") center center/cover no-repeat transparent;
+}
+
+/* ---------- Keyframe Layer 1 ---------- */
+@-webkit-keyframes foglayer_01_opacity {
+  0% { opacity: .4; }
+  22% { opacity: .5; }
+  40% { opacity: .8; }
+  58% { opacity: .4; }
+  80% { opacity: .16; }
+  100% { opacity: .1; }
+}
+@-moz-keyframes foglayer_01_opacity {
+  0% { opacity: .1; }
+  22% { opacity: .5; }
+  40% { opacity: .8; }
+  58% { opacity: .4; }
+  80% { opacity: .6; }
+  100% { opacity: .1; }
+}
+@-o-keyframes foglayer_01_opacity {
+  0% { opacity: .1; }
+  22% { opacity: .5; }
+  40% { opacity: .8; }
+  58% { opacity: .4; }
+  80% { opacity: .6; }
+  100% { opacity: .1; }
+}
+@keyframes foglayer_01_opacity {
+  0% { opacity: .1; }
+  22% { opacity: .5; }
+  40% { opacity: .8; }
+  58% { opacity: .4; }
+  80% { opacity: .6; }
+  100% { opacity: .1; }
+}
+/* ---------- Keyframe Layer 2 ---------- */
+@-webkit-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@-moz-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@-o-keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+@keyframes foglayer_02_opacity {
+  0% { opacity: .5; }
+  25% { opacity: .2; }
+  50% { opacity: .1; }
+  80% { opacity: .3; }
+  100% { opacity: .5; }
+}
+/* ---------- Keyframe Layer 3 ---------- */
+@-webkit-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@-moz-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@-o-keyframes foglayer_03_opacity {
+  0% { opacity: .8 }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+@keyframes foglayer_03_opacity {
+  0% { opacity: .8; }
+  27% { opacity: .2; }
+  52% { opacity: .6; }
+  68% { opacity: .3; }
+  100% { opacity: .8; }
+}
+/* ---------- Keyframe moveMe ---------- */
+@-webkit-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@-moz-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@-o-keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@keyframes foglayer_moveme {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+@media only screen
+  and (min-width: 280px)
+  and (max-width: 767px) {
+    #foglayer_01 .image01, #foglayer_01 .image02,
+    #foglayer_02 .image01, #foglayer_02 .image02 {
+      z-index: -2;
+      width: 100%;
+      height: 50%;
+    }
+  }
+
+
+/* NAVBAR */
+/* NAVBAR */
+/* NAVBAR */
