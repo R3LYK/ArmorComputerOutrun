@@ -8,7 +8,36 @@
     <title>Document</title>
 </head>
 <body>
-  
+  <header class="primary-header flex">
+    <div>
+      <h1 class="logo">LOGO</h1>
+    </div>
+
+    <button class="mobile-nav-toggle" 
+    aria-controls="primary-navigation" aria-expanded="false">
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+        <li class="active">
+          <a href="index.html">
+            <span>Home</span>
+          </a>
+        <li>
+          <a href="destination.html">
+            <span>About</span>
+          </a>
+        <li><a href="crew.html">
+          <span>Services</span>
+        </a>
+        <li><a href="technology.html">
+          <span>Contact</span>
+        </a>
+      </ul>
+    </nav>
+  </header>
+
     <div class="background-80s animated-clouds stars" style="--background-height:100vh">
         <div class="sun"></div>
         <div class="grid" style="--grid-color:rgba(174, 5, 253, 0.986);--grid-size:30px;--grid-blur:1px;"></div>
@@ -143,22 +172,28 @@
 
         <!-- windows building  sixth from right (top to bottom, left to right)-->
 
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 45.5vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 45.5vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(230, 227, 54);--window-offset:-14.4vh;--window-bottom: 44vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 44vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 42.5vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 42.5vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(230, 227, 54);--window-offset:-14.4vh;--window-bottom: 41vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 41vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 39.5vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(230, 227, 54);--window-offset:-12.3vh;--window-bottom: 39.5vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 38vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 38vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 36.5vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 36.5vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 35vh"></div>
-        <div class="window" style="--window-base:1.7vh;--window-height:.6vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 35vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 45.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 45.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(230, 227, 54);--window-offset:-14.4vh;--window-bottom: 44.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 44.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 43.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 43.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(230, 227, 54);--window-offset:-14.4vh;--window-bottom: 42.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 42.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 41.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(230, 227, 54);--window-offset:-12.3vh;--window-bottom: 41.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 40.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 40.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 39.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 39.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 38.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 38.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(230, 227, 54);--window-offset:-14.4vh;--window-bottom: 37.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 37.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 36.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 36.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-14.4vh;--window-bottom: 35.5vh"></div>
+        <div class="window" style="--window-base:1.7vh;--window-height:.4vh;--window-color:  rgb(119, 121, 93);--window-offset:-12.3vh;--window-bottom: 35.5vh"></div>
 
         <!-- windows building seventh from right (top to bottom, left to right)-->
   
@@ -272,12 +307,9 @@
         <div class="mountainFrontDetail-skewY" style="--mountain-base:6vh;--mountain-height:7vh;--mountain-color1:#367175;--mountain-color2:#681e6b;--mountain-tilt:22deg;--mountain-offset:23vh;--mountain-bottom:43%;--mountain-layer: -2"></div>
 
 
-
         <div class="road-off" ></div>
         <div class="overlay"></div>
         
-        <div class="content"><p>placeholder</p></div>
-      </div>
 
       <div id="foglayer_01" class="fog">
         <div class="image01"></div>

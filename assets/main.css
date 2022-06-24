@@ -13,7 +13,7 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
   font-size:3vw;
 }
 
-
+/* 2d background */
 .grid{
   position:absolute;
   bottom: -30%;
@@ -163,8 +163,6 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
   pointer-events: none;
 }
 
-
-
 .background-80s{
   background: linear-gradient(to bottom, #4e2068 0,#2d3769 24%,#a458d6 45%,#980fce 60%,#532e5a 65%,#322636 65%) fixed;
   background-size:100% var(--background-height,100vh);
@@ -176,7 +174,6 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
   height:var(--background-height,100vh);
   z-index:-2;
 }
-
 
 .animated-clouds:before{
   filter: url(#filter);
@@ -249,17 +246,21 @@ src: local('RoadRage'), url('http://coding-dude.com/wp/wp-content/uploads/Road_R
   0% {
     opacity:0.5;
   }
-  50% {
+  33% {
     opacity:0.9;
   }
   
-  100% {
-    opacity:0.7;
+  66% {
+    opacity:0.4;
   }
+
+  100% {
+    opacity: .6;
+  }
+
 }
 
-
-
+/* content */
 .text{
   position:absolute;
   left:50%;
@@ -407,7 +408,9 @@ body {
   overflow-x: hidden; 
 }
 
-/* ---------- Fog ---------- */
+/* ---------- Fog Images ---------- */
+/* ---------- Fog Images ---------- */
+/* ---------- Fog Images ---------- */
 
 #foglayer_01, #foglayer_02, #foglayer_03 {
   z-index: -2;
@@ -442,7 +445,9 @@ body {
   animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
 }
 
-/* ---------- Moving Fog ---------- */
+/* ---------- Fog Animation ---------- */
+/* ---------- Fog Animation ---------- */
+/* ---------- Fog Animation ---------- */
 /*
   'size: cover' || 'size: 100%'; results remain the same
   'attachment: scroll' can be added or removed; results remain the same
@@ -581,3 +586,102 @@ body {
 /* NAVBAR */
 /* NAVBAR */
 /* NAVBAR */
+
+/* accessibility */
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+/* Primary Header */
+
+a > span {
+  color: white;
+  font-size: 3vh;
+  font-weight:bold;
+}
+
+.logo {
+  margin: .2rem;
+}
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* remove's hamburger menu from DOM at when not viewed on mobile*/
+.mobile-nav-toggle {
+  display: none;
+}
+
+.primary-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* background of navbar when moved to right */
+  background: hsl(0 0% 0% / .5);
+  
+}
+
+/* blur not supported by FireFox */
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+    backdrop-filter: blur(1rem);
+  }
+}
+
+@media (max-width: 35em) {
+  .primary-navigation {
+    --gap: 3em;
+
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+
+    flex-direction: column;
+    /* min() allows for response if device is turned sideways */
+    padding: min(25vh, 10rem) 2rem;
+
+    transform: translateX(100%);
+    transition: transform 300ms ease-out;
+    transition-timing-function: cubic-bezier(.44,.54,.61,.52);
+
+  }
+
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background-color: transparent;
+    background: url('/assets/images/whiteHam.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    width: 5rem;
+    border: 0;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+
+  }
+
+  .mobile-nave-toggle[aria-expanded="true"] {
+    background-image: url("");
+  }
+}
+
+/* Utilities */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem)
+}
