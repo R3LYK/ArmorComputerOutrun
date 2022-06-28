@@ -656,7 +656,7 @@ body {
     column-gap: 1rem;
   
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 500;
     height: 55%;
     width: 98%;
     overflow-y: scroll;
@@ -703,18 +703,15 @@ a > span:hover {
 
 .logo {
 
-  display: block;
+  margin: .5rem;
   z-index: 900;
-  clip-path: auto;
-  position: fixed;
   background-image: url('/assets/images/ArmorComputersLogo2022_NS.png');
   background-repeat: no-repeat;
-  background-size: 30vh;
-  width: 23vw;
-  height: 11vh;
-  bottom: 87%;
-  left: 3%;
+  background-size: contain;
+  width: 300px;
+  height: 110px;
 }
+
 
 .primary-header {
   align-items: center;
@@ -722,7 +719,7 @@ a > span:hover {
 }
 
 /* remove's hamburger menu from DOM at when not viewed on mobile*/
-.mobile-nav-toggle {
+.mobile-nav-toggle, .mobile-nav-slide {
   display: none;
 }
 
@@ -755,7 +752,7 @@ nav {
   .primary-navigation {
     --gap: 3em;
 
-    position: fixed;
+    position: absolute;
     z-index: 1000;
     inset: 0 0 0 40%;
 
@@ -808,19 +805,20 @@ nav {
     width: 5rem;
     border: 0;
     aspect-ratio: 1;
-    top: 64rem;
+    top: 90%;
     right: 2rem;
 
   }
 
   .logo {
-    
-    background-size: 30vh;
-    width: 67vw;
-    height: 20vh;
-    bottom: 58.4%;
-    left: 17%;
-  }
+
+    width:35vh;
+    height:15vh;
+    position:absolute;
+    left:calc(50% + -5vw);
+    bottom:65%;
+    transform:translateX(-50%);
+    }
 
 }
 
