@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="assets/main.css" media="screen"/>
     <script src="assets/main.js" defer></script>
-    <script type="module" src="/assets/domFunctions.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -41,13 +41,31 @@
     </nav>
   </header>
 
-  <div class="landing-content">
-    <p>
-      Armor Computers is an LLC based out of Preston, MN and has been servicing all kinds of electronics since 2013. 
-      Computers, TVs, phones, calculators, radios, you name it!
-      Though based out of Preston, the service area provided will go as far as needed!
-    </p>
-  </div>
+  <div class="contact-form">
+    <form onsubmit="sendEmail(); reset(); return false;">
+      <h3>CONTACT US</h3>
+        <div class="row">
+            <div class="col-6 col-12-small">
+                <input type="text" name="name" id="name" placeholder="Name" />
+            </div>
+            <div class="col-6 col-12-small">
+                <input type="text" name="email" id="email" placeholder="Email" />
+            </div>
+            <div class="col-12">
+                <input type="text" name="subject" id="subject" placeholder="Subject" />
+            </div>
+            <div class="col-12">
+                <textarea name="message" id="message" placeholder="Message"></textarea>
+            </div>
+            <div class="col-12">
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message" /></li>
+                    <li><input type="reset" value="Clear Form" class="alt" /></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
 
     <div class="background-80s animated-clouds stars" style="--background-height:100vh">
         <div class="sun"></div>
@@ -78,7 +96,7 @@
         <!--7th from right-->
         <div class="detailRoof" style="--detail-base:3vh;--detail-height:2vh;--detail-color:rgb(37, 37, 37);--detail-tilt:36deg;--detail-offset:-20vh;--detail-bottom:42.8vh;"></div>
 
-        <!-- windows -->
+       <!-- windows -->
 
         <!-- windows building first from right (top to bottom)-->
 
@@ -244,7 +262,6 @@
 
 
 
-
         <!--2d left of city-->
         <!--left side (left to right)-->
         <!--layer 1-->
@@ -337,5 +354,3 @@
       
 </body>
 </html>
-  
-  

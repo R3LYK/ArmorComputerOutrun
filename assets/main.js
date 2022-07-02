@@ -31,28 +31,32 @@ navToggle.addEventListener('click', () => {
 navSlide.addEventListener('click', () => {
     const position = primaryNav.getAttribute('slide-down');
     if (position === 'false') {
-        primaryNav.style.transition = "300ms ease-out";
-        primaryNav.style.padding = "min(60vh, 45rem) 5rem";
+        primaryNav.style.transition = '300ms ease-out';
+        primaryNav.style.padding = 'min(60vh, 45rem) 5rem';
         primaryNav.setAttribute('slide-down', true);
         navSlide.style.backgroundImage = "url('/assets/images/arrowUp.png')";
     } else if (position === 'true') {
-        primaryNav.style.transition = "300ms ease-out";
-        primaryNav.style.padding = "min(25vh, 12rem) 5rem";
+        primaryNav.style.transition = '300ms ease-out';
+        primaryNav.style.padding = 'min(25vh, 12rem) 5rem';
         primaryNav.setAttribute('slide-down', false);
         navSlide.style.backgroundImage = "url('/assets/images/arrowDown.png')";
     }
     
-    console.log("position = " + position)
+    console.log('position = ' + position)
 });
 
 
-// ----- Content Positioning / Background Changes ----- //
-// ----- Content Positioning / Background Changes ----- //
-// ----- Content Positioning / Background Changes ----- //
-
-const windowSelect = document.querySelector('.windows');
-const mediaQuery = window.matchMedia('(max-width: 420px)');
-
-if (window.location.href.indexOf("services") && mediaQuery === true) {
-    windowSelect.style.color = 'rgb(85, 85, 81)';
+function sendEmail(){
+    Email.send({
+        SecureToken : "4ff05753-1662-4adc-94cc-da0393527169",
+        To : 'therelyk@protonmail.com',
+        From : "pythonprojectone@gmail.com",
+        Subject : "This is the subject",
+        Body : "Name: " + document.getElementById("name").value
+            + "<br> Email: " + document.getElementById("email").value
+            + "<br> Subject: " + document.getElementById("subject").value
+            + "<br> Message: " + document.getElementById("message").value
+    }).then(
+    message => alert("Message Sent")
+    );
 }
