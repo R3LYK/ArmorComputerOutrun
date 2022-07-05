@@ -34,12 +34,12 @@ navSlide.addEventListener('click', () => {
         primaryNav.style.transition = '300ms ease-out';
         primaryNav.style.paddingTop = '10vh';
         primaryNav.setAttribute('slide-down', true);
-        navSlide.style.backgroundImage = "url('/assets/images/arrowUp.png')";
+        navSlide.style.backgroundImage = "url('/assets/images/arrowDown.png')";
     } else if (position === 'true') {
         primaryNav.style.transition = '300ms ease-out';
         primaryNav.style.paddingTop = '30vh';
         primaryNav.setAttribute('slide-down', false);
-        navSlide.style.backgroundImage = "url('/assets/images/arrowDown.png')";
+        navSlide.style.backgroundImage = "url('/assets/images/arrowUp.png')";
         if (window.innerHeight < 450) {
             primaryNav.style.paddingTop = '30vh';
         } else {
@@ -49,6 +49,7 @@ navSlide.addEventListener('click', () => {
     
     console.log('position = ' + position)
 });
+
 
 function sendEmail(){
     Email.send({

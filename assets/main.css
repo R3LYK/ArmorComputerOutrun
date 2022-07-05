@@ -799,12 +799,12 @@ form button {
   }
 
   .services-content {
-    margin-top: 0;
+    margin-top: -10vh;
     font-size: 16px;
     margin-left: 2%;
     width: 95%;
     columns: 3;
-    padding-top: 15px;
+    padding-top: 5px;
   }
 
   .services {
@@ -814,7 +814,7 @@ form button {
   }
 
   .service-contact {
-    font-size: 18px;
+    font-size: 16px;
     width: 50%;
     margin-left: auto;
     
