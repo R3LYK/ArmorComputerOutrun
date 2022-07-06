@@ -53,7 +53,7 @@ navSlide.addEventListener('click', () => {
 
 function sendEmail(){
     Email.send({
-        SecureToken : "4ff05753-1662-4adc-94cc-da0393527169",
+        SecureToken : "<placeholderTOKEN>",
         To : '<placeholder@email.com>',
         From : "<placeholder@email.com>",
         Subject : "This is the subject",
