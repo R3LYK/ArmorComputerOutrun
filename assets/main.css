@@ -604,14 +604,25 @@ body {
   color: white;
   background: hsl(0 0% 0% / .5);
   border-radius: 35px;
+  max-height: 650px;
 
+  margin-top: 5%;
+  margin-bottom: 2%;
   line-height: 1.5;
   text-align: center;
   width: 70vw;
   position: absolute;
-  bottom: 15vh;
   left: 15%;
+
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* Edge */
+  scrollbar-width: none; /* Firefox */
   
+}
+
+.about-content::-webkit-scrollbar {
+  display: none;
 }
 
 .about-content p {
@@ -621,6 +632,8 @@ body {
 
 .services-content {
 
+  max-width: 850px;
+  display: flex;
   font-size: 23px;
   font-family: 'Ubuntu';
   color: white;
@@ -628,17 +641,23 @@ body {
   background: hsl(0 0% 0% / .5);
   border-radius: 35px;
   margin-top: 3%;
-  margin-left: 28%;
-  margin-right: 28%;
+  margin-left: auto;
+  margin-right: auto;
+
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* Edge */
+  scrollbar-width: none; /* Firefox */
   
 }
 
-.services {
-  padding: 2% 8% 2% 8%;
+.services-content::-webkit-scrollbar {
+  display: none;
 }
 
-.services > span {
-  font-size: 35px;
+.services {
+  
+  padding: 2% 8% 2% 8%;
 }
 
 .service-contact {
@@ -649,9 +668,12 @@ body {
   line-height: 2;
   background: hsl(0 0% 0% / .5);
   border-radius: 35px;
+  min-width: 600px;
+  max-width: 650px;
   margin-top: 1%;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-contact p {
@@ -719,7 +741,7 @@ form button {
   border-radius: 10px;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 450px) {
   .landing-content {
     font-size: 20px;
     width: 100%;
@@ -735,11 +757,9 @@ form button {
   .about-content {
     text-align: left;
     font-size: 16px;
-    height: 70%;
     width: 98%;
-    overflow-y: scroll;
     line-height: 1.5;
-    bottom: 0%;
+    bottom: 3%;
     left: 1%;
   }
 
@@ -752,7 +772,6 @@ form button {
     margin-left: 2%;
     margin-right: 2%;
 
-    height: 450px;
     overflow-y: scroll;
     
   }
@@ -764,9 +783,9 @@ form button {
   .service-contact {
 
     font-size: 19px;
+    max-width: 350px;
+    min-width: 50px;
     margin-top: 3%;
-    margin-left: 2%;
-    margin-right: 2%;
   }
 
   .service-contact p {
@@ -783,28 +802,32 @@ form button {
 
   
   .landing-content {
-    font-size: 16px;
-    margin-top: 35vh;
+    font-size:  20px;
+    margin-bottom: 10%;
   }
 
   .about-content {
     text-align: left;
     font-size: 16px;
-    height: 70%;
     width: 98%;
-    overflow-y: scroll;
     line-height: 1.5;
-    bottom: 0%;
+    bottom: 3%;
     left: 1%;
   }
 
   .services-content {
-    margin-top: -10vh;
+
     font-size: 16px;
-    margin-left: 2%;
-    width: 95%;
-    columns: 3;
-    padding-top: 5px;
+
+    border-radius: 35px;
+    margin-top: 25%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 550px;
+    overflow-y: scroll;
+    
   }
 
   .services {
@@ -814,16 +837,18 @@ form button {
   }
 
   .service-contact {
+
+    max-width: 350px;
+    min-width: 50px;
     font-size: 16px;
-    width: 50%;
-    margin-left: auto;
+    margin-bottom: 2%;
     
   }
 
   form {
-  
-    height: 300px;
+    margin-top: 25%;
     margin-bottom: 0;
+    height: 280px;
 
   }
 
@@ -848,6 +873,7 @@ form button {
 
   .contact-form {
     margin-top: -5%;
+    
   }
 
 }
@@ -948,8 +974,7 @@ nav {
     padding: min(10vh, 12rem) 5rem;
 
     transform: translateX(100%);
-    transition: transform 300ms ease-out;
-    transition-timing-function: cubic-bezier(.44,.54,.61,.52);
+    transition: transform 300ms ease-in-out;
 
   }
 
@@ -1017,7 +1042,7 @@ nav {
   .primary-navigation {
     --gap: 2em;
 
-    padding-top: 5%;
+    padding-top: 10vh;
     padding-left: 10%;
     position: absolute;
     z-index: 1000;
@@ -1028,10 +1053,10 @@ nav {
    
 
     transform: translateX(100%);
-    transition: transform 300ms ease-out;
-    transition-timing-function: cubic-bezier(.44,.54,.61,.52);
+    transition: transform 300ms ease-in-out;
 
   }
+
 
   .primary-navigation[data-visible="true"] {
     transform: translateX(0%);
@@ -1045,11 +1070,11 @@ nav {
     background: url('/assets/images/whiteHam.png');
     background-size: 30px;
     background-repeat: no-repeat;
-    width: 5rem;
+    width: 2rem;
     border: 0;
     aspect-ratio: 1;
-    margin-top: 5%;
-    margin-left: 93%;
+    top: 2rem;
+    right: 1rem;
   }
 
   .mobile-nav-toggle[aria-expanded="true"] {
@@ -1064,10 +1089,13 @@ nav {
     z-index: 9999;
     background-color: transparent;
     background-image: url('/assets/images/arrowDown.png');
-    background-size: 50px;
+    background-size: 40px;
     background-repeat: no-repeat;
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    border: 0;
+    aspect-ratio: 1;
+    bottom: 2rem;
+    right: 1rem;
     border: 0;
     aspect-ratio: 1;
    

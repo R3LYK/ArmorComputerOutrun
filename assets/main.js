@@ -31,12 +31,12 @@ navToggle.addEventListener('click', () => {
 navSlide.addEventListener('click', () => {
     const position = primaryNav.getAttribute('slide-down');
     if (position === 'false') {
-        primaryNav.style.transition = '300ms ease-out';
+        primaryNav.style.transition = '500ms ease-in-out';
         primaryNav.style.paddingTop = '10vh';
         primaryNav.setAttribute('slide-down', true);
         navSlide.style.backgroundImage = "url('/assets/images/arrowDown.png')";
     } else if (position === 'true') {
-        primaryNav.style.transition = '300ms ease-out';
+        primaryNav.style.transition = '500ms ease-in-out';
         primaryNav.style.paddingTop = '30vh';
         primaryNav.setAttribute('slide-down', false);
         navSlide.style.backgroundImage = "url('/assets/images/arrowUp.png')";
