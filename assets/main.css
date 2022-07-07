@@ -987,7 +987,7 @@ nav {
 
   }
 
-  .primary-navigation[data-visible="true"] {
+  .primary-navigation[data-visible="false"] {
     transform: translateX(0%);
   }
 
