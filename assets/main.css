@@ -396,7 +396,14 @@ html, body {
 body {
   background: #000;
   background: rgba(0, 0, 0, 1);
+  width: 100%;
   overflow-x: hidden; 
+}
+
+@media (max-width: 450px) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 /* ---------- Fog Images ---------- */
@@ -905,6 +912,10 @@ form button {
 }
 
 /* Primary Header */
+
+.nav {
+  overflow-x: hidden;
+}
 
 a > span {
   color: white;

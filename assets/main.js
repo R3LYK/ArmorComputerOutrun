@@ -22,11 +22,11 @@ navToggle.addEventListener('click', () => {
     } else if (visibility === 'true') {
         primaryNav.setAttribute('data-visible', false);
         navToggle.setAttribute('aria-expanded', false);
+        navSlide.setAttribute('aria-expanded', false);
         navSlide.style.display = 'none';
     }
 
     console.log("visibility = " + visibility)
-    console.log(navSlide.style.display)
 });
 
 // ----- menu slide on mobile ----- //
