@@ -41,7 +41,7 @@
   left:calc(50%);
   bottom:35%;
   transform:translateX(-50%);
-  background-image: linear-gradient(rgb(255, 85, 7),rgb(233, 24, 170)),linear-gradient(black,white);
+  background-image: linear-gradient(rgb(250, 37, 161),rgb(187, 95, 71)),linear-gradient(black,white);
   clip-path:polygon(-50% 0px,150% -50%,150% 55%,-50% 55%,
                     -50% 62%,150% 62%,150% 70%,0 70%,
                     -50% 75%,150% 75%,150% 80%,0 80%,
@@ -49,7 +49,7 @@
                     -50% 87%,150% 87%,150% 90%,0 90%,
                     -50% 92%,150% 92%,150% 95%,0 95%,
                     -50% 96%,150% 96%,150% 150%,0 150%);
-    box-shadow: rgba(201, 160, 201, 0.7) 0px 0 23px;
+    box-shadow: rgba(228, 140, 198, 0.7) 0px 0 53px;
     
 }
 
@@ -155,7 +155,7 @@
 }
 
 .background-80s{
-  background: linear-gradient(to bottom, #4e2068 0,#2d3769 24%,#a458d6 45%,#980fce 60%,#532e5a 65%,#322636 65%) fixed;
+  background: linear-gradient(to bottom, #4580ee 0,#071249 24%,#a458d6 45%,#f309df 60%,#a914c7 65%,#020a3b 65%) fixed;
   background-size:100% var(--background-height,100vh);
   overflow:hidden;
   position:absolute;
