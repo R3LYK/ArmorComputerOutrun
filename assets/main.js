@@ -14,13 +14,11 @@ navToggle.addEventListener('click', () => {
 
     if (visibility === 'false') {
         primaryNav.setAttribute('data-visible', true);
-        primaryNav.style.visibility = "visible";
         navToggle.setAttribute('aria-expanded', true);
         navSlide.setAttribute('aria-expanded', true);
         navSlide.style.display = 'block';
     } else if (visibility === 'true') {
         primaryNav.setAttribute('data-visible', false);
-        primaryNav.style.visibility = "hidden";
         navToggle.setAttribute('aria-expanded', false);
         navSlide.style.display = 'none';
     }
