@@ -23,7 +23,7 @@ navToggle.addEventListener('click', () => {
         navSlide.style.display = 'none';
     }
 
-    console.log(visibility)
+    console.log("visibility = " + visibility)
 });
 
 // ----- menu slide on mobile ----- //

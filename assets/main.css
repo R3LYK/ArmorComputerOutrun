@@ -770,27 +770,30 @@ form button {
 
     font-size: 16px;
 
-    max-height: 65vh;
     border-radius: 35px;
-    margin-top: 10vh;
-    margin-bottom: 5%;
+    margin-top: 15vh;
+    margin-bottom: 2%;
     margin-left: 2%;
     margin-right: 2%;
 
+    max-width: 550px;
     overflow-y: scroll;
     
   }
 
   .services {
-    padding: 2% 8% 2% 8%;
+    margin-top: -5px;
+    padding-left: 35px;
+    padding-bottom: 15px;
   }
 
   .service-contact {
 
-    font-size: 19px;
     max-width: 350px;
     min-width: 50px;
-    margin-bottom: 1%;
+    font-size: 16px;
+    margin-bottom: 2%;
+    
   }
 
   .service-contact p {
@@ -826,7 +829,7 @@ form button {
     font-size: 16px;
 
     border-radius: 35px;
-    margin-top: 15vh;
+    margin-top: 10vh;
     margin-bottom: 2%;
     margin-left: auto;
     margin-right: auto;
