@@ -778,7 +778,7 @@ form button {
     font-size: 16px;
 
     border-radius: 35px;
-    margin-top: 15vh;
+    margin-top: 25vh;
     margin-bottom: 2%;
     margin-left: 2%;
     margin-right: 2%;
@@ -813,6 +813,18 @@ form button {
 
 }
 
+/* handling older phones with shorter screen sizes */
+@media (max-height: 700px) {
+
+  .landing-content{
+    margin-top: 60vh;
+  }
+
+  .contact-form {
+    margin-top: 15vh;
+  }
+}
+
 @media (min-width: 450px) and (max-width: 950px) {
 
   
@@ -836,7 +848,7 @@ form button {
     font-size: 16px;
 
     border-radius: 35px;
-    margin-top: 10vh;
+    margin-top: 15vh;
     margin-bottom: 2%;
     margin-left: auto;
     margin-right: auto;
@@ -890,6 +902,49 @@ form button {
   .contact-form {
     margin-top: -5%;
     
+  }
+
+}
+
+@media screen 
+  and (max-width: 900px)
+  and (orientation: landscape) {
+
+  .landing-content {
+    margin-top: 30vh;
+  }
+  
+  .services-content {
+    margin-top: -10vh;
+  }
+
+  .contact-form {
+    margin-top: -65vh;
+  }
+
+}
+
+
+/* iPad landscape */
+@media screen 
+  and (device-width: 1080px)
+  and (device-height: 810px)
+ {
+
+  .landing-content {
+    margin-top: 45vh;
+  }
+  
+  .about-content {
+    margin-top: 5px;
+  }
+
+  .services-content {
+    margin-top: 50px;
+  }
+
+  .contact-form {
+    margin-top: 45px;
   }
 
 }

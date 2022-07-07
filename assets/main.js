@@ -8,6 +8,10 @@ const navToggle = document.querySelector('.mobile-nav-toggle');
 const navSlide = document.querySelector('.mobile-nav-slide');
 primaryNav.style.display = 'hidden';
 
+if(window.innerWidth < 450) {
+    
+}
+
 
 // ----- toggle nav on mobile ----- //
 
