@@ -6,10 +6,10 @@
 const primaryNav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 const navSlide = document.querySelector('.mobile-nav-slide');
-primaryNav.style.display = 'hidden';
+primaryNav.hidden = true;
 
 if(window.innerWidth < 450) {
-    
+
 }
 
 
@@ -19,11 +19,13 @@ navToggle.addEventListener('click', () => {
     const visibility = primaryNav.getAttribute('data-visible');
 
     if (visibility === 'false') {
+        primaryNav.hidden = false;
         primaryNav.setAttribute('data-visible', true);
         navToggle.setAttribute('aria-expanded', true);
         navSlide.setAttribute('aria-expanded', true);
         navSlide.style.display = 'block';
     } else if (visibility === 'true') {
+        primaryNav.hidden = true;
         primaryNav.setAttribute('data-visible', false);
         navToggle.setAttribute('aria-expanded', false);
         navSlide.setAttribute('aria-expanded', false);
