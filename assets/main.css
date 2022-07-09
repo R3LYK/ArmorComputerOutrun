@@ -400,11 +400,6 @@ body {
   overflow-x: hidden; 
 }
 
-@media (max-width: 450px) {
-  header {
-    overflow-x: hidden;
-  }
-}
 
 /* ---------- Fog Images ---------- */
 /* ---------- Fog Images ---------- */

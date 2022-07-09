@@ -3,14 +3,15 @@
 // ----- Navigation/Menu ----- //
 // ----- Navigation/Menu ----- //
 
+
 const primaryNav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 const navSlide = document.querySelector('.mobile-nav-slide');
 
-if(window.innerWidth < 450) {
-
-}
-
+primaryNav.setAttribute('data-visible', false);
+navToggle.setAttribute('aria-expanded', false);
+navSlide.setAttribute('aria-expanded', false);
+navSlide.style.display = 'none';
 
 // ----- toggle nav on mobile ----- //
 
