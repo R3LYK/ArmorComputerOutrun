@@ -392,6 +392,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 body {
   background: #000;
@@ -1002,6 +1003,7 @@ a > span:hover {
 }
 
 .primary-navigation {
+  overflow-x: hidden;
   list-style: none;
   padding: 0;
   padding-left: 45px;
@@ -1035,6 +1037,7 @@ nav {
     
     --gap: 3em;
 
+    overflow-x: hidden;
     position: absolute;
     z-index: 1000;
     top: 0;

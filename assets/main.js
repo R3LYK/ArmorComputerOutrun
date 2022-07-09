@@ -8,7 +8,6 @@ const primaryNav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 const navSlide = document.querySelector('.mobile-nav-slide');
 
-document.getElementsByClassName('nav').hidden = true;
 
 
 // ----- toggle nav on mobile ----- //
@@ -18,14 +17,12 @@ navToggle.addEventListener('click', () => {
 
     if (visibility === 'false') {
         
-        document.getElementsByClassName('nav').hidden = false;
         primaryNav.setAttribute('data-visible', true);
         navToggle.setAttribute('aria-expanded', true);
         navSlide.setAttribute('aria-expanded', true);
         navSlide.style.display = 'block';
     } else if (visibility === 'true') {
         
-        document.getElementsByClassName('nav').hidden = true;
         primaryNav.setAttribute('data-visible', false);
         navToggle.setAttribute('aria-expanded', false);
         navSlide.setAttribute('aria-expanded', false);
