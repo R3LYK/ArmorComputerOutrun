@@ -1052,6 +1052,10 @@ nav {
     flex-direction: column;
     padding: min(10vh, 12rem) 5rem;
 
+    -ms-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
     transform: translateX(100%);
     transition: transform 300ms ease-in-out;
 
@@ -1137,6 +1141,10 @@ nav {
     flex-direction: column;
    
 
+    -ms-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
     transform: translateX(100%);
     transition: transform 300ms ease-in-out;
 
