@@ -1129,7 +1129,7 @@ nav {
     flex-direction: column;
    
 
-    transform: translateX(100%);
+    transform: translateX(99%);
     transition: transform 300ms ease-in-out;
 
   }
