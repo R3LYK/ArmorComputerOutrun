@@ -8,7 +8,7 @@ const primaryNav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 const navSlide = document.querySelector('.mobile-nav-slide');
 
-
+document.getElementsByClassName('nav').hidden = true;
 
 
 // ----- toggle nav on mobile ----- //
