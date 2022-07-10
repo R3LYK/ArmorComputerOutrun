@@ -400,6 +400,7 @@ body {
   background: #000;
   background: rgba(0, 0, 0, 1);
   width: 100vw;
+  height: 100vh;
   overflow-x: hidden; 
 }
 
