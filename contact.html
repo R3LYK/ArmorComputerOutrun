@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="assets/main.css" media="screen"/>
     <script src="assets/main.js" defer></script>
+    <script src ="https://smtpjs.com/v3/smtp.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -42,7 +43,7 @@
   </header>
 
   <div class="contact-form">
-    <form>
+    <form id="myForm" onsubmit="sendEmail(); reset(); return false;">
       <h3>Contact Us</h3>
           <input type="text" id="name" placeholder="Your Name" required/>
           <input type="email" id="email" placeholder="Email" required/>
