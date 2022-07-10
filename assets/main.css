@@ -390,11 +390,13 @@
 /*courtesy https://codepen.io/braedencraig/pen/dBVKzO*/
 
 html, body {
+  position: absolute;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 body {
+  position: absolute;
   background: #000;
   background: rgba(0, 0, 0, 1);
   width: 100vw;
@@ -997,7 +999,7 @@ a > span:hover {
   justify-content: space-between;
 }
 
-/* remove's hamburger menu from DOM at when not viewed on mobile*/
+/* remove's hamburger menu from DOM when not viewed on mobile*/
 .mobile-nav-toggle, .mobile-nav-slide {
   display: none;
 }
