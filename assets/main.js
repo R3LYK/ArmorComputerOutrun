@@ -55,21 +55,3 @@ navSlide.addEventListener('click', () => {
     
     console.log('position = ' + position)
 });
-
-
-function sendEmail(){
-    
-
-    Email.send({
-        SecureToken : "e1ac6111-21eb-4cce-99e7-96caaa5ed2eb",
-        To : 'tyler@armor-computers.com',
-        From : "junktest01010202@gmail.com",
-        Subject : "Customer email from website",
-        Body : "Name: " + document.getElementById("name").value
-            + "<br> Email: " + document.getElementById("email").value
-            + "<br> Phone: " + document.getElementById("phone").value
-            + "<br> Message: " + document.getElementById("message").value
-    }).then(
-    message => alert("Message Sent")
-    );
-}
