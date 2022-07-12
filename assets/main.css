@@ -1021,7 +1021,9 @@ and (device-width: 760px) {
 
 
 /* navbar */
+
 a > span {
+  
   width: 220px;
   height: 50px;
   border: none;
@@ -1032,6 +1034,10 @@ a > span {
   position: relative;
   z-index: 0;
   border-radius: 10px;
+}
+
+a > span:hover {
+  cursor: crosshair;
 }
 
 a > span:before {
@@ -1094,6 +1100,10 @@ a > span:after {
   position: relative;
   z-index: 0;
   border-radius: 10px;
+}
+
+.on-hover:hover {
+  cursor: crosshair;
 }
 
 .on-hover:before {

@@ -21,6 +21,7 @@ navToggle.addEventListener('click', () => {
         navToggle.setAttribute('aria-expanded', true);
         navSlide.setAttribute('aria-expanded', true);
         navSlide.style.display = 'block';
+    
     } else if (visibility === 'true') {
         
         primaryNav.setAttribute('data-visible', false);
