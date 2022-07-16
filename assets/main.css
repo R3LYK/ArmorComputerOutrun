@@ -476,7 +476,6 @@ body {
 }
 
 .landing-content, .about-content, .services-content, .service-contact {
-  font-size: 16px;
   position: absolute;
   font-family: 'Ubuntu', 'Courier New';
   color: white;
@@ -625,10 +624,20 @@ form button {
   }
 }
 
+@media (max-width: 949px) {
+  p, li {
+    font-size: 16px;
+  }
+}
+
 @media (min-width: 950px) {
 
+  p, li {
+    font-size: 22px;
+  }
+
   .landing-content {
-    font-size: 16px;
+    font-size: 22px;
     padding-bottom: 18px;
   }
 
@@ -649,10 +658,6 @@ form button {
     font-size: 16px;
     max-width: 430px;
     padding-bottom: 11px;
-  }
-
-  p {
-    font-size: 16px;
   }
 
   .service-contact {
@@ -684,7 +689,12 @@ form button {
 
 @media (max-height: 550px) {
 
+  p, li {
+    font-size: 16px;
+  }
+
   .services-content, .about-content {
+    font-size: 16px;
     bottom: 15%;
   }
 
@@ -927,29 +937,11 @@ a > span:hover {
   list-style: none;
   padding-left: 45px;
   padding-right: 45px;
+  padding-top: 8px;
+  padding-bottom: 2px;;
   margin: 0;
   background: hsl(0 0% 0% / .5);
   border-radius: 35px 0px 0px 35px;
-}
-
-@media (min-width: 951px) {
-  .primary-navigation {
-    padding-top: 3px;
-  }
-}
-
-@media (min-width: 1130px) {
-  .primary-navigation {
-    padding-top: 0;
-    padding-bottom: 4px;
-  }
-}
-
-@media (min-width: 1800px) {
-  .primary-navigation {
-    padding-top: 0;
-    padding-bottom: 5px;
-  }
 }
 
 nav {
