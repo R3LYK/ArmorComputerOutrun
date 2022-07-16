@@ -1,8 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-
-
-/* preload as font */
 :root{
   font-size:3vw;
 }
@@ -482,27 +477,22 @@ body {
 .landing-content, .about-content, .services-content, .service-contact {
   font-size: 16px;
   position: absolute;
-  font-family: 'Ubuntu', 'Courier New', Courier, monospace;
+  font-family: 'Ubuntu', 'Courier New';
   color: white;
   text-align: center;
-  position: absolute;
   background: hsl(0 0% 0% / .8); 
   border-radius: 35px;
-  max-width: 600px;
-
-  position:absolute;
 }
 
 .landing-content {
   width: 98vw;
-  max-width: 550px;
+  max-width: 650px;
   left:48%;
   top: 65%;
   transform:translateX(-50%);
-  font-size: 16px;
   margin: 2% 2%;
   padding-top: 10px;
-  padding-bottom: 8px;
+  padding-bottom: 13px;
   padding-left: 14px;
   padding-right: 14px;
 }
@@ -510,14 +500,12 @@ body {
 
 .about-content {
   min-width: 98vw;
-  max-height: 60vh;
+  max-height: 50vh;
   left:48%;
-  top: 30%;
+  bottom: 30%;
   transform:translateX(-50%);
-  font-size: 16px;
   margin: 2% 2%;
   padding: 3% 3%;
-
   overflow-y: scroll;
   scroll-behavior: smooth;
   -ms-overflow-style: none; /* Edge */
@@ -533,11 +521,10 @@ body {
   text-align: left;
   width: 98vw;
   max-width: 550px;
-  max-height: 40vh;
+  max-height: 50vh;
   left:48%;
-  top: 35%;
+  bottom: 30%;
   transform:translateX(-50%);
-  font-size: 16px;
   line-height: 2;
   margin: 2% 2%;
   padding-top: 15px;
@@ -563,7 +550,6 @@ body {
   left:50%;
   bottom: 25px;
   transform:translateX(-50%);
-  font-size: 16px;
   padding: 5px 5px 5px 5px;
 }
 
@@ -629,29 +615,43 @@ form button {
   border-radius: 10px;
 }
 
-@media (min-width: 720px) {
-
-  p, li {
-    font-size: 22px;
+@media (max-width: 375px) {
+  .contact-form {
+    margin-top: 50px;
   }
 
+  form h3 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 950px) {
+
   .landing-content {
+    font-size: 16px;
     padding-bottom: 18px;
   }
 
   .about-content {
-    min-width: 70vw;
+    min-width: 80vw;
+    max-height: 400px;
     padding: 25px;
   }
 
   .services-content {
     max-height: 70vh;
-    top: 280px;
+    top: 30%;
+    bottom: 20%;
   }
 
   .service-contact {
+    font-size: 16px;
     max-width: 430px;
     padding-bottom: 11px;
+  }
+
+  p {
+    font-size: 16px;
   }
 
   .service-contact {
@@ -659,19 +659,40 @@ form button {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-height: 700px) {
+
   .contact-form {
-    margin-top: 50px;
+    margin-top: 5%;
   }
+
+  form {
+    height: 90%;
+  }
+
+  form input, form textarea {
+  margin: 2px;
+ }
+
+ form button {
+  font-size: 16px;
+  height: 40px;
+  width: 100px;
+  margin-bottom: 5px;
+ }
 }
 
 
 @media (max-height: 450px) {
 
+  .services-content, .about-content {
+    bottom: 15%;
+  }
+
   .contact-form {
     height: 70%;
     margin-top: 0;
   }
+
 
   form h3 {
     font-size: 20px;
@@ -703,19 +724,13 @@ form button {
   }
 }
 
-/* @media (min-width: 400px) {
-  .contact-form {
-    margin-top: 40%;
-  }
-
-}
 
 @media (min-height: 451px) and (max-width: 950px) {
   .contact-form {
     height: 70%;
     margin-top: 15%;
   }
-} */
+}
 
 
 
@@ -846,6 +861,23 @@ a > span:after {
   100% { background-position: 0 0; }
 }
 
+/* input */
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 5px #2467d9, inset 0 0 6px #3882ff, inset 0 0 7px #12346f;
+  border: 1px solid #e7018a;
+  /* border-color: linear-gradient(#ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000); */
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
 /* ------NAVBAR----- */
 /* ------NAVBAR----- */
 /* ------NAVBAR----- */
@@ -891,7 +923,6 @@ a > span:hover {
   height: 80px;
 }
 
-
 .primary-header {
   align-items: center;
   justify-content: space-between;
@@ -913,7 +944,6 @@ a > span:hover {
   margin: 0;
   background: hsl(0 0% 0% / .5);
   border-radius: 35px 0px 0px 35px;
-  
 }
 
 nav {
@@ -955,6 +985,7 @@ nav {
     overflow-x: hidden;
     position: absolute;
     z-index: 1000;
+    padding-top: 10vh;
     top: 0;
     bottom: 0;
     right: 0;
@@ -997,31 +1028,6 @@ nav {
     background-size: 25px;
     
   }
-
-  .mobile-nav-slide {
-    display: none;
-    position: absolute;
-    z-index: 9999;
-    background-color: transparent;
-    background-image: url('/assets/images/arrowDown.png'); /* changing from up => down onClick handled in main.js navSlide()*/
-    background-size: 50px;
-    background-repeat: no-repeat;
-    width: 38px;
-    border: 0;
-    aspect-ratio: 1;
-    bottom: 3rem;
-    right: 2rem;
-
-  }
-
-  /* .logo {
-    width:200px;
-    height:70px;
-    position:absolute;
-    left: 10px;
-    top: 10px;
-    } */
-
 }
 
 /* tablet or mobile-sideways */
@@ -1034,7 +1040,7 @@ nav {
   .primary-navigation {
     --gap: 2em;
 
-    padding-top: 10vh;
+    padding-top: 50px;
     padding-left: 10%;
     position: absolute;
     z-index: 1000;
@@ -1066,7 +1072,7 @@ nav {
     background: url('/assets/images/whiteHam.png');
     background-size: 30px;
     background-repeat: no-repeat;
-    width: 28px;
+    width: 30px;
     border: 0;
     aspect-ratio: 1;
     top: 1rem;
@@ -1077,25 +1083,6 @@ nav {
     background-image: url('/assets/images/Close-256.png');
     background-size: 22px;
     
-  }
-
-  .mobile-nav-slide {
-    display: block;
-    position: absolute;
-    z-index: 9999;
-    background-color: transparent;
-    background-image: url('/assets/images/arrowDown.png');
-    background-size: 45px;
-    background-repeat: no-repeat;
-    width: 34px;
-    border: 0;
-    aspect-ratio: 1;
-    bottom: 1rem;
-    right: 1.1rem;
-    border: 0;
-    aspect-ratio: 1;
-   
-
   }
 }
 
