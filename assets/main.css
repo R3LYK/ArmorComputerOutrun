@@ -926,7 +926,7 @@ a > span:hover {
 }
 
 /* remove's hamburger menu from DOM when not viewed on mobile*/
-.mobile-nav-toggle {
+.mobile-nav-toggle, .mobile-nav-slide {
   display: none;
 }
 
