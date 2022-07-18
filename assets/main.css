@@ -642,7 +642,7 @@ form button {
   }
 
   .about-content {
-    top: 30vh;
+    top: 28vh;
     min-width: 60vw;
     max-height: 400px;
     padding: 25px;
@@ -650,8 +650,8 @@ form button {
 
   .services-content {
     max-height: 70vh;
-    top: 30%;
-    bottom: 20%;
+    top: 22%;
+    bottom: 10%;
   }
 
   .service-contact {
